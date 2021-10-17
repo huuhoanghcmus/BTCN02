@@ -11,13 +11,13 @@ function calculate(){
                 document.getElementById('result').value = parseFloat(num1) + parseFloat(num2);
                 break;
         case '-' :
-                document.getElementById('result').value = parseFloat(num1) -  parseFloat(num2);
+                document.getElementById('result').value = Number(num1) -  Number(num2);
                 break;
         case '*' :
-                document.getElementById('result').value = parseFloat(num1) *  parseFloat(num2);
+                document.getElementById('result').value = Number(num1) *  Number(num2);
                 break;
         case '/' :
-                document.getElementById('result').value = parseFloat(num1) /  parseFloat(num2);
+                document.getElementById('result').value = Number(num1) /  Number(num2);
                 break;
         }
     }
@@ -46,7 +46,7 @@ function check(){
     if(num==""){
         return; 
     }
-    if(isNaN(parseFloat(num))){
+    if(isNaN(Number(num))){
         announce.append("   Giá trị ở ô ");
         if(this.id == "num1")
         {
